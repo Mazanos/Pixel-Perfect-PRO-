@@ -1,6 +1,6 @@
 
 
-const screenPrice = 100000
+const screenPrice = 1000
 
 
 
@@ -49,16 +49,14 @@ if (fullPrice < 0) {
     console.log('Что то пошло не так');
 } else if (fullPrice == 0) {
     console.log('Сделайте заказ от 20000 и получите скидку');
-} else if (fullPrice < 20000) {
+} else if (fullPrice === 0 || fullPrice < 20000) {
     console.log('скидка не предусмотрена');
 } else if (fullPrice == 20000) {
     console.log('Сделайте заказ от 20000 и получите скидку');
-} else if (fullPrice < 50000) {
+} else if (fullPrice < 50000 || fullPrice == 50000) {
     console.log('Сделаем скидку 5%');
 } else if (fullPrice == 50000) {
     console.log('Для цены 50000 скидка составит 5%');
 } else if (fullPrice > 50000) {
     console.log('Сделаем скидку 10%');
-} else {
-    console.log ('Ваша скидка 15%')
-}
+} 
