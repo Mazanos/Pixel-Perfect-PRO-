@@ -33,32 +33,8 @@ let servicePrice2 = +prompt("Сколько будет стоить этот в�
 
 console.log(servicePrice2)
 
-let fullPrice = screenPrice + +servicePrice1 + +servicePrice2
-
-console.log(fullPrice)
 
 let persentage = 15/100
-
-let servicePercentPrice = fullPrice - fullPrice*persentage
-
-console.log(servicePercentPrice)
-
-if (fullPrice < 0) {
-    console.log('Что то пошло не так');
-} else if (fullPrice == 0) {
-    console.log('Сделайте заказ от 20000 и получите скидку');
-} else if (fullPrice === 0 || fullPrice < 20000) {
-    console.log('скидка не предусмотрена');
-} else if (fullPrice == 20000) {
-    console.log('Сделайте заказ от 20000 и получите скидку');
-} else if (fullPrice < 50000 || fullPrice == 50000) {
-    console.log('Сделаем скидку 5%');
-} else if (fullPrice == 50000) {
-    console.log('Для цены 50000 скидка составит 5%');
-} else if (fullPrice > 50000) {
-    console.log('Сделаем скидку 10%');
-} 
-
 
 
 const getAllServicePrices = function () {
@@ -96,6 +72,7 @@ const getServicePercentPrices = function () {
  console.log (servicePercentPrice)
 
 
+ 
  const getRollbackMessage = function () { 
     if (fullPrice < 0) {
         return 'Что то пошло не так';
@@ -114,4 +91,5 @@ const getServicePercentPrices = function () {
     } 
  };    
  
- console.log (getRollbackMessage);
+ 
+ console.log (getRollbackMessage());
