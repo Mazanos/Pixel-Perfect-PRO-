@@ -94,4 +94,24 @@ const getServicePercentPrices = function () {
 
  servicePercentPrice = getServicePercentPrices(); 
  console.log (servicePercentPrice)
+
+
+ const getRollbackMessage = function () { 
+    if (fullPrice < 0) {
+        return 'Что то пошло не так';
+    } else if (fullPrice == 0) {
+        return 'Сделайте заказ от 20000 и получите скидку';
+    } else if (fullPrice === 0 || fullPrice < 20000) {
+        return 'скидка не предусмотрена';
+    } else if (fullPrice == 20000) {
+        return'Сделайте заказ от 20000 и получите скидку';
+    } else if (fullPrice < 50000 || fullPrice == 50000) {
+        return'Сделаем скидку 5%';
+    } else if (fullPrice == 50000) {
+        return 'Для цены 50000 скидка составит 5%';
+    } else if (fullPrice > 50000) {
+        return 'Сделаем скидку 10%';
+    } 
+ };    
  
+ console.log (getRollbackMessage);
