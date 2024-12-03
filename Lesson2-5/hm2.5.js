@@ -13,12 +13,14 @@ const asking = function () {
     screensValue = prompt("Какие типы экранов нужны?")
     responsive = prompt("Нужен ли респонсив на сайте?")
 }
+console.log (asking)
+
 
 const checkIsNumber = function (x) {
     return !isNaN(parseFloat(x)) && isFinite(x)
 
 }
-
+console.log (checkIsNumber)
 
 const getAllServicePrices = function() {
     let sum = 0
@@ -41,3 +43,4 @@ const getAllServicePrices = function() {
     }
     return sum
 }
+console.log (getAllServicePrices)
