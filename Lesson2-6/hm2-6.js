@@ -1,11 +1,15 @@
+
+
+
+
 const gameBotFunction = function () {
-    function randomGenerate(min,max) {
+    function randomGenerate(min, max) {
         let rand = min - 0.5 + Math.random() * (max - min + 1)
-        return Math.random(rand)
+        return Math.round(rand)
     }
     
     
-    let mysteryNumber = randomGenerate(1,100)
+    let mysteryNumber = 38
     let answerNum = ""
     let tries = 2
     
@@ -26,7 +30,7 @@ const gameBotFunction = function () {
         }
     
         while (!isNumber(answerNum) || answerNum.trim() === "") {
-            alert("Вы ввели строку")
+            alert("Вы ввели строку:")
             answerNum = prompt("Угадайте число от 1 до 100")
     
         }
@@ -37,13 +41,13 @@ const gameBotFunction = function () {
         } else if (mysteryNumber < answerNum) {
             alert("Загаданное число меньше: " + "Осталось попыток: " + tries)
         } else if (mysteryNumber === answerNum) {
-        const isUserWantNewGame = confirm("Поздравляю, Вы угадали!!! Хотели бы сыграть еще?")
+          const isUserWantNewGame = confirm("Поздравляю, Вы угадали!!! Хотели бы сыграть еще?")
         if (isUserWantNewGame) {
             tries = 2
-            mysteryNumber = randomGenerate(1,100)
-        } else {
+            mysteryNumber = randomGenerate(1, 100)
+          } else {
             tries = 0
-        }
+          }
         }
     
         if (tries > 0) {
@@ -60,5 +64,8 @@ const gameBotFunction = function () {
             }
         }
         
-        }
     }
+}
+
+let launchGameBot = gameBotFunction();
+launchGameBot();
